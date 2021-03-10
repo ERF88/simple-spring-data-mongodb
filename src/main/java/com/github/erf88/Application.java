@@ -23,15 +23,14 @@ public class Application implements CommandLineRunner {
 		this.reader = new Scanner(System.in);
 		Integer op = 0;
 		do {
-			System.out.println("Choose option below");
-			System.out.println("----------------------\n");
+			System.out.println("------------ MENU ------------");
 			System.out.println("1 - FindAll Customer");
 			System.out.println("2 - FindOne Customer");
 			System.out.println("3 - Create Customer");
 			System.out.println("4 - Update Customer");
 			System.out.println("5 - Delete Customer");
 			System.out.println("0 - Exit");
-			System.out.println("----------------------\n");
+			System.out.println("------------------------------");
 
 			op = this.reader.nextInt();
 			this.reader.nextLine();			
@@ -53,8 +52,8 @@ public class Application implements CommandLineRunner {
 			case 5:
 				delete();							
 				break;
-
 			default:
+				System.out.println("Invalid Option");
 				break;
 			}
 			
